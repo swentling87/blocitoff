@@ -1,4 +1,15 @@
 %h1 Welcome #{current_user.email}!
 .jumbotron
-  %p
-    Blocitoff is an application that allows a user to create custom to-do lists where items self-destruct after 7 days.
+  .row
+    .col-md-12
+      %h2
+        To-do Items
+        =link_to "New Item", new_user_item_path(current_user), class: "pull-right btn btn-success"
+      <br>
+      .div
+        %ul
+        - @items.each do |i|
+          %li
+            %h4
+              #{i.name}
+              %small.pull-right #{i.created_at}

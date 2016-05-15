@@ -1,0 +1,8 @@
+.row
+  .col-md-4
+    =form_for [@user, @item] do |f|
+      .div.form-group
+        = f.label :name
+        = f.text_field :name, class: 'form-control'
+      .div
+        = f.submit "Save"
