@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blocitoff</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+</head>
+<body>
+  <div class ="container">
+    <%= render 'layouts/messages' %>
+    <ul class ="nav nav-tabs">
+      <li><%= link_to "Blocitoff", root_path %></li>
+      <li><%= link_to "About", welcome_about_path %></li>
+      <li class="pull-right">
+        <% if user_signed_in? %>
+           <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+         <% else %>
+           <%= link_to "Sign In", new_user_session_path %>
+         <% end %>
+      </li>
+      <li class="pull-right">
+        <% if user_signed_in? %>
+         Signed in as: <strong><%= current_user.email %></strong>
+         <% end %>
+       </li>
+
+    </li>
+    </ul>
+  <%= yield %>
+</body>
+</html>
