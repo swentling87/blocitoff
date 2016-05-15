@@ -8,8 +8,6 @@
       <br>
       .div
         %ul
-        - @items.each do |i|
+        - @items.each do |item|
           %li
-            %h4
-              #{i.name}
-              %small.pull-right #{i.created_at}
+            = render partial: "items/item", locals: {item: item}
