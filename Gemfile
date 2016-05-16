@@ -21,6 +21,7 @@ source 'https://rubygems.org'
  gem 'figaro'
  gem 'haml'
  gem 'devise'
+ gem 'faker'
 
  group :development, :test do
    gem 'byebug'
@@ -28,6 +29,5 @@ source 'https://rubygems.org'
    gem 'spring'
    gem 'rspec-rails'
    gem 'shoulda'
-   gem 'faker'
    gem 'factory_girl_rails'
  end
