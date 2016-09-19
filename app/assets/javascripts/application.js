@@ -14,3 +14,17 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+var ready;
+
+ready = function() {
+  $(".main-header").hide().fadeIn(2500)
+
+  $(".feature").mouseenter(function() {
+    $(this).addClass("feature-enter")});
+  $(".feature").mouseleave(function() {
+    $(this).removeClass("feature-enter")});
+
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

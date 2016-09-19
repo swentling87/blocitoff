@@ -1,3 +1,31 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.main {
+  background-image: url(asset-path('todo.jpg'));
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+  height: 600px;
+  width: 100%;
+}
+
+p {
+  padding-top: -5px;
+}
+
+.feature {
+  border: 2px solid black;
+  width: 48%;
+  height: 100px;
+  border-radius: 5px;
+  margin-left: 1%;
+  margin-right: 1%;
+  text-align: center;
+  padding-top: 15px;
+}
+.feature-enter {
+  background-color: gray;
+  color: white;
+  text-align: center;
+}
